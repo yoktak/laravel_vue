@@ -26,7 +26,7 @@ class PostController extends Controller
         return inertia("Post/Create",["categories" => $category->get()]);
     }
     
-    public function store(PostRequest $request, Post $post)
+    public function store(Request $request, Post $post)
     {
         $input = $request->all();
         $post->fill($input)->save();
